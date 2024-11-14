@@ -5,7 +5,7 @@ CC ?= $(CROSS_COMPILE)gcc
 all: helloyoctoworld
 
 helloyoctoworld: main.c
-	$(CC) -o $@ $^
+	$(CC) $(LDFLAGS) -o $@ $^
 
 .PHONY: clean
 
