@@ -1,4 +1,8 @@
-CC=gcc
+CROSS_COMPILE ?=
+CC ?= $(CROSS_COMPILE)gcc
+
+
+all: helloyoctoworld
 
 helloyoctoworld: main.c
 	$(CC) -o $@ $^
@@ -6,4 +10,4 @@ helloyoctoworld: main.c
 .PHONY: clean
 
 clean:
-	rm helloyoctoworld
+	rm -f helloyoctoworld
